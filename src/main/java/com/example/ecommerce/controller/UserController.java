@@ -2,9 +2,9 @@ package com.example.ecommerce.controller;
 
 import com.example.ecommerce.dto.UserDTO;
 import jakarta.annotation.PostConstruct;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -21,6 +21,29 @@ public class UserController {
     @GetMapping
     public List<UserDTO> getUsers(){
         return users;
+    }
+
+    @GetMapping("/{cpf}")
+    public UserDTO getUsersFilter(@PathVariable String cpf){
+        return users
+                .stream()
+                .filter(userDTO -> userDTO.getCpf().equals(cpf))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("User not found."));
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public UserDTO insert(@RequestBody @Valid UserDTO userDTO){
+        userDTO.setDataCadastro(LocalDateTime.now());
+        users.add(userDTO);
+        return userDTO;
+    }
+
+    @DeleteMapping("/{cpf}")
+    public boolean remove(@PathVariable String cpf){
+        return users
+                .removeIf(userDTO -> userDTO.getCpf().equals(cpf));
     }
 
     public static List<UserDTO> users = new ArrayList<UserDTO>();
