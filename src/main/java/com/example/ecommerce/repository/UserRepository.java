@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-    User findByCpf(String cpf);
+    User findByCpfAndKey(String cpf, String key);
 
     List<User> queryByNomeLike(String name);
 }

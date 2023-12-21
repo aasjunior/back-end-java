@@ -1,6 +1,7 @@
 package com.example.ecommerce.service;
 
 import com.example.ecommerce.dto.UserDTO;
+import com.example.ecommerce.exception.UserNotFoundException;
 import com.example.ecommerce.model.User;
 import com.example.ecommerce.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -44,12 +45,12 @@ public class UserService {
         return UserDTO.convert(user);
     }
 
-    public UserDTO findByCpf(String cpf){
-        User user = userRepository.findByCpf(cpf);
+    public UserDTO findByCpf(String cpf, String key){
+        User user = userRepository.findByCpfAndKey(cpf, key);
         if(user!=null){
             return UserDTO.convert(user);
         }
-        return null;
+        throw new UserNotFoundException("User Not Found");
     }
 
     public List<UserDTO> queryByName(String name){

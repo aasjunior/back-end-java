@@ -1,81 +1,62 @@
 package com.example.ecommerce.controller;
 
 import com.example.ecommerce.dto.UserDTO;
-import jakarta.annotation.PostConstruct;
+import com.example.ecommerce.exception.UserNotFoundException;
+import com.example.ecommerce.service.UserService;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
 @RequestMapping("/user")
+@RequiredArgsConstructor
 public class UserController {
-    @GetMapping("/message")
-    public String getMessage(){
-        return "Spring boot is working!";
-    }
+    private final UserService userService;
 
     @GetMapping
     public List<UserDTO> getUsers(){
-        return users;
+        return userService.getAll();
     }
 
-    @GetMapping("/{cpf}")
-    public UserDTO getUsersFilter(@PathVariable String cpf){
-        return users
-                .stream()
-                .filter(userDTO -> userDTO.getCpf().equals(cpf))
-                .findFirst()
-                .orElseThrow(() -> new RuntimeException("User not found."));
+    @GetMapping("/{id}")
+    public UserDTO findById(@PathVariable Long id){
+        return userService.findById(id);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public UserDTO insert(@RequestBody @Valid UserDTO userDTO){
-        userDTO.setDataCadastro(LocalDateTime.now());
-        users.add(userDTO);
-        return userDTO;
+    public UserDTO newUser(@RequestBody @Valid UserDTO userDTO){
+        return userService.save(userDTO);
     }
 
-    @DeleteMapping("/{cpf}")
-    public boolean remove(@PathVariable String cpf){
-        return users
-                .removeIf(userDTO -> userDTO.getCpf().equals(cpf));
+    @GetMapping("/{cpf}/cpf")
+    public UserDTO findByCpf(@RequestParam(name="key") String key, @PathVariable String cpf){
+        return userService.findByCpf(cpf, key);
     }
 
-    public static List<UserDTO> users = new ArrayList<UserDTO>();
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable Long id) throws UserNotFoundException {
+        userService.delete(id);
+    }
 
-    @PostConstruct
-    public void initiateList(){
-         UserDTO userDTO = new UserDTO();
-         userDTO.setNome("Eduardo");
-         userDTO.setCpf("123");
-         userDTO.setEndereco("Rua a");
-         userDTO.setEmail("eduardo@email.com");
-         userDTO.setTelefone("1234-3454");
-         userDTO.setDataCadastro(LocalDateTime.now());
+    @GetMapping("/search")
+    public List<UserDTO> queryByName(@RequestParam(name="nome", required = true) String nome){
+        return userService.queryByName(nome);
+    }
 
-         UserDTO userDTO2 = new UserDTO();
-         userDTO2.setNome("Luiz");
-         userDTO2.setCpf("456");
-         userDTO2.setEndereco("Rua b");
-         userDTO2.setEmail("luiz@email.com");
-         userDTO2.setTelefone("1234-3454");
-         userDTO2.setDataCadastro(LocalDateTime.now());
+    @PatchMapping("/{id}")
+    public UserDTO editUser(@PathVariable Long id, @RequestBody UserDTO userDTO){
+        return userService.editUser(id, userDTO);
+    }
 
-         UserDTO userDTO3 = new UserDTO();
-         userDTO3.setNome("Bruna");
-         userDTO3.setCpf("789");
-         userDTO3.setEndereco("Rua c");
-         userDTO3.setEmail("bruna@email.com");
-         userDTO3.setTelefone("1234-3454");
-         userDTO3.setDataCadastro(LocalDateTime.now());
-
-         users.add(userDTO);
-         users.add(userDTO2);
-         users.add(userDTO3);
+    @GetMapping("/pageable")
+    public Page<UserDTO> getUsersPage(Pageable pageable){
+        return userService.getAllPage(pageable);
     }
 }
