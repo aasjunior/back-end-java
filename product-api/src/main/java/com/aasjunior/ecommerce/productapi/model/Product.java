@@ -29,7 +29,7 @@ public class Product {
         Product product = new Product();
         product.setName(productDTO.getName());
         product.setPrice(productDTO.getPrice());
-        product.setDescription(product.getDescription());
+        product.setDescription(productDTO.getDescription());
         product.setProductIdentifier(productDTO.getProductIdentifier());
         if(productDTO.getCategory() != null){
             product.setCategory(
