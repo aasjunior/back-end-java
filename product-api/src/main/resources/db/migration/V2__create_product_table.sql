@@ -1,4 +1,4 @@
-create table products.product(
+create table if not exists products.product(
     id bigserial primary key,
     product_identifier varchar not null,
     name varchar(100) not null,
