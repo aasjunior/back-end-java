@@ -1,6 +1,6 @@
 create schema if not exists shopping;
 
-create table if not exists shopping.api(
+create table if not exists shopping.shop(
   id bigserial primary key,
   user_identifier varchar(100) not null,
   date timestamp not null,
