@@ -1,0 +1,14 @@
+create schema if not exists shopping;
+
+create table if not exists shopping.api(
+  id bigserial primary key,
+  user_identifier varchar(100) not null,
+  date timestamp not null,
+  total float not null
+);
+
+create table if not exists shopping.item(
+    shop_id bigserial REFERENCES shopping.shop(id),
+    product_identifier varchar(100) not null,
+    price float not null
+);
