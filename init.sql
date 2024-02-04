@@ -1,3 +1,8 @@
+-- init.sql
+CREATE DATABASE products;
+
+\c products;
+
 CREATE SCHEMA IF NOT EXISTS products;
 
 CREATE TABLE products.category(
