@@ -10,6 +10,7 @@ import lombok.Setter;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Getter
 @Setter
@@ -18,9 +19,7 @@ import java.util.List;
 public class ShopDTO {
     @NotBlank
     private String userIdentifier;
-    @NotNull
     private Float total;
-    @NotNull
     private LocalDateTime date;
     @NotNull
     private List<ItemDTO> items;
@@ -30,6 +29,16 @@ public class ShopDTO {
         shopDTO.setUserIdentifier(shop.getUserIdentifier());
         shopDTO.setTotal(shop.getTotal());
         shopDTO.setDate(shop.getDate());
+
+        // Convertendo os Item para ItemDTO
+        shopDTO.setItems(
+            shop
+                .getItems()
+                .stream()
+                .map(ItemDTO::convert)
+                .collect(Collectors.toList())
+        );
+
         return shopDTO;
     }
 }
