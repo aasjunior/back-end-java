@@ -18,15 +18,15 @@ public class ReportRepositoryImpl implements ReportRepository{
     @Override
     public List<Shop> getShopByFilters(LocalDate dataInicio, LocalDate dataFim, Float valorMinimo){
         StringBuilder sb = new StringBuilder();
-        sb.append("SELECT s");
-        sb.append("FROM shop s");
-        sb.append("WHERE s.date >= :dataInicio");
+        sb.append("SELECT s ");
+        sb.append("FROM shop s ");
+        sb.append("WHERE s.date >= :dataInicio ");
 
         if(dataFim != null){
-            sb.append("AND s.date <= :dataFim");
+            sb.append("AND s.date <= :dataFim ");
         }
         if(valorMinimo != null){
-            sb.append("AND s.total <= :valorMinimo");
+            sb.append("AND s.total <= :valorMinimo ");
         }
 
         Query query = entityManager.createQuery(sb.toString());
@@ -48,12 +48,12 @@ public class ReportRepositoryImpl implements ReportRepository{
             """
             SELECT COUNT(sp.id),
                    SUM(sp.total),
-                   AVG(sp.total)        
+                   AVG(sp.total)         
             """
         );
-        sb.append("FROM shopping.shop sp");
-        sb.append("WHERE sp.date >= :dataInicio");
-        sb.append("AND sp.date <= :dataFim");
+        sb.append("FROM shopping.shop sp ");
+        sb.append("WHERE sp.date >= :dataInicio ");
+        sb.append("AND sp.date <= :dataFim ");
 
         Query query = entityManager.createNativeQuery(sb.toString());
         query.setParameter("dataInicio", dataInicio.atTime(0, 0));
