@@ -38,7 +38,6 @@ public class ShopDTO {
                 .map(ItemDTO::convert)
                 .collect(Collectors.toList())
         );
-
         return shopDTO;
     }
 }
