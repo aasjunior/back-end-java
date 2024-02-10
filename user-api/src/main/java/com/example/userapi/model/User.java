@@ -1,6 +1,6 @@
 package com.example.userapi.model;
 
-import com.example.userapi.dto.UserDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

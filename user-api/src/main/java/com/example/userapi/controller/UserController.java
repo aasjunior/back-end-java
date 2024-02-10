@@ -1,6 +1,6 @@
 package com.example.userapi.controller;
 
-import com.example.userapi.dto.UserDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
 import com.example.userapi.exception.UserNotFoundException;
 import com.example.userapi.service.UserService;
 import jakarta.validation.Valid;

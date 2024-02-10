@@ -1,7 +1,7 @@
 package com.aasjunior.ecommerce.shoppingapi.controller;
 
-import com.aasjunior.ecommerce.shoppingapi.dto.ShopDTO;
-import com.aasjunior.ecommerce.shoppingapi.dto.ShopReportDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ShopReportDTO;
 import com.aasjunior.ecommerce.shoppingapi.service.ReportService;
 import com.aasjunior.ecommerce.shoppingapi.service.ShopService;
 import jakarta.validation.Valid;

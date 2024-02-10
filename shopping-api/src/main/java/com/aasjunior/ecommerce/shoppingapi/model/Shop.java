@@ -1,6 +1,5 @@
 package com.aasjunior.ecommerce.shoppingapi.model;
 
-import com.aasjunior.ecommerce.shoppingapi.dto.ShopDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,6 +9,8 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
 
 @Getter
 @Setter

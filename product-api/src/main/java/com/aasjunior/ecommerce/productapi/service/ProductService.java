@@ -1,6 +1,7 @@
 package com.aasjunior.ecommerce.productapi.service;
 
-import com.aasjunior.ecommerce.productapi.dto.ProductDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ProductDTO;
+import com.aasjunior.ecommerce.productapi.converter.DTOConverter;
 import com.aasjunior.ecommerce.productapi.model.Product;
 import com.aasjunior.ecommerce.productapi.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,7 @@ public class ProductService {
         List<Product> products = productRepository.findAll();
         return products
                 .stream()
-                .map(ProductDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
@@ -29,21 +30,21 @@ public class ProductService {
         List<Product> products = productRepository.getProductByCategory(categoryId);
         return products
                 .stream()
-                .map(ProductDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
     public ProductDTO findByProductIdentifier(String productIdentifier){
         Product product = productRepository.findByProductIdentifier(productIdentifier);
         if(product != null){
-            return ProductDTO.convert(product);
+            return DTOConverter.convert(product);
         }
         return null;
     }
 
     public ProductDTO save(ProductDTO productDTO){
         Product product = productRepository.save(Product.convert(productDTO));
-        return ProductDTO.convert(product);
+        return DTOConverter.convert(product);
     }
 
     public ProductDTO delete(long productId){
@@ -64,12 +65,12 @@ public class ProductService {
         if(productDTO.getPrice() != null){
             product.setPrice(productDTO.getPrice());
         }
-        return ProductDTO.convert(productRepository.save(product));
+        return DTOConverter.convert(productRepository.save(product));
     }
 
     public Page<ProductDTO> getAllPage(Pageable page){
         Page<Product> users = productRepository.findAll(page);
         return users
-                .map(ProductDTO::convert);
+                .map(DTOConverter::convert);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.userapi.service;
 
-import com.example.userapi.dto.UserDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
+import com.example.userapi.converter.DTOConverter;
 import com.example.userapi.exception.UserNotFoundException;
 import com.example.userapi.model.User;
 import com.example.userapi.repository.UserRepository;
@@ -21,20 +22,20 @@ public class UserService {
         List<User> users = userRepository.findAll();
         return users
                 .stream()
-                .map(UserDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
     public UserDTO findById(Long userId){
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new RuntimeException("User Not Found"));
-        return UserDTO.convert(user);
+        return DTOConverter.convert(user);
     }
 
     public UserDTO save(UserDTO userDTO){
         userDTO.setDataCadastro(LocalDateTime.now());
         User user = userRepository.save(User.convert(userDTO));
-        return UserDTO.convert(user);
+        return DTOConverter.convert(user);
     }
 
     public UserDTO delete(Long userId){
@@ -42,13 +43,13 @@ public class UserService {
                 .findById(userId)
                 .orElseThrow(() -> new RuntimeException("User Not Found"));
         userRepository.delete(user);
-        return UserDTO.convert(user);
+        return DTOConverter.convert(user);
     }
 
     public UserDTO findByCpf(String cpf, String key){
         User user = userRepository.findByCpfAndKey(cpf, key);
         if(user!=null){
-            return UserDTO.convert(user);
+            return DTOConverter.convert(user);
         }
         throw new UserNotFoundException("User Not Found");
     }
@@ -57,7 +58,7 @@ public class UserService {
         List<User> users = userRepository.queryByNomeLike(name);
         return users
                 .stream()
-                .map(UserDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
@@ -76,13 +77,13 @@ public class UserService {
         }
 
         user = userRepository.save(user);
-        return UserDTO.convert(user);
+        return DTOConverter.convert(user);
     }
 
     // Consulta com paginação
     public Page<UserDTO> getAllPage(Pageable page){
         Page<User> users = userRepository.findAll(page);
         return users
-                .map(UserDTO::convert);
+                .map(DTOConverter::convert);
     }
 }

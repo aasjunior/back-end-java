@@ -1,8 +1,12 @@
 package com.aasjunior.ecommerce.shoppingapi.service;
 
-import com.aasjunior.ecommerce.shoppingapi.dto.ShopDTO;
+import com.aasjunior.ecommerce.shoppingapi.converter.DTOConverter;
 import com.aasjunior.ecommerce.shoppingapi.model.Shop;
 import com.aasjunior.ecommerce.shoppingapi.repository.ShopRepository;
+import com.aasjunior.ecommerce.shoppingclient.dto.ItemDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ProductDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -15,12 +19,14 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class ShopService {
     private final ShopRepository shopRepository;
+    private final ProductService productService;
+    private final UserService userService;
 
     public List<ShopDTO> getAll(){
         List<Shop> shops = shopRepository.findAll();
         return shops
                 .stream()
-                .map(ShopDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
@@ -29,7 +35,7 @@ public class ShopService {
                 .findAllByUserIdentifier(userIdentifier);
         return shops
                 .stream()
-                .map(ShopDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
@@ -38,7 +44,7 @@ public class ShopService {
                 .findAllByDateGreaterThan(shopDTO.getDate());
         return shops
                 .stream()
-                .map(ShopDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
@@ -46,12 +52,19 @@ public class ShopService {
         Optional<Shop> shop = shopRepository
                 .findById(productId);
         if(shop.isPresent()){
-            return ShopDTO.convert(shop.get());
+            return DTOConverter.convert(shop.get());
         }
         return null;
     }
 
     public ShopDTO save(ShopDTO shopDTO){
+        if(userService.getUserByCpf(shopDTO.getUserIdentifier()) == null) {
+            return null;
+        }
+
+        if(!validateProducts(shopDTO.getItems())){
+            return null;
+        }
         shopDTO.setTotal(
             shopDTO
                 .getItems()
@@ -63,6 +76,18 @@ public class ShopService {
         shop.setDate(LocalDateTime.now());
 
         shop = shopRepository.save(shop);
-        return shopDTO.convert(shop);
+        return DTOConverter.convert(shop);
+    }
+
+    private boolean validateProducts(List<ItemDTO> items){
+        for(ItemDTO item: items){
+            ProductDTO productDTO = productService
+                    .getProductByIdentifier(item.getProductIdentifier());
+            if(productDTO == null){
+                return false;
+            }
+            item.setPrice(productDTO.getPrice());
+        }
+        return true;
     }
 }

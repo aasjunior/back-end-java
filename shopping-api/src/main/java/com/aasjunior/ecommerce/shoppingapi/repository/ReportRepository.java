@@ -1,6 +1,6 @@
 package com.aasjunior.ecommerce.shoppingapi.repository;
 
-import com.aasjunior.ecommerce.shoppingapi.dto.ShopReportDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ShopReportDTO;
 import com.aasjunior.ecommerce.shoppingapi.model.Shop;
 import org.springframework.stereotype.Repository;
 

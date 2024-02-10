@@ -1,6 +1,6 @@
 package com.aasjunior.ecommerce.shoppingapi.model;
 
-import com.aasjunior.ecommerce.shoppingapi.dto.ItemDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ItemDTO;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;

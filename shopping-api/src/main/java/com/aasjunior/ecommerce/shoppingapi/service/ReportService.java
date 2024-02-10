@@ -1,7 +1,8 @@
 package com.aasjunior.ecommerce.shoppingapi.service;
 
-import com.aasjunior.ecommerce.shoppingapi.dto.ShopDTO;
-import com.aasjunior.ecommerce.shoppingapi.dto.ShopReportDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.ShopReportDTO;
+import com.aasjunior.ecommerce.shoppingapi.converter.DTOConverter;
 import com.aasjunior.ecommerce.shoppingapi.model.Shop;
 import com.aasjunior.ecommerce.shoppingapi.repository.ReportRepositoryImpl;
 import lombok.RequiredArgsConstructor;
@@ -28,7 +29,7 @@ public class ReportService {
         );
         return shops
                 .stream()
-                .map(ShopDTO::convert)
+                .map(DTOConverter::convert)
                 .collect(Collectors.toList());
     }
 
