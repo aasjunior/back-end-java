@@ -15,7 +15,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.aasjunior.ecommerce.converter.DTOConverter;
 import com.aasjunior.ecommerce.model.User;
 import com.aasjunior.ecommerce.repository.UserRepository;
-import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
+import com.aasjunior.ecommerce.dto.UserDTO;
 
 @ExtendWith(MockitoExtension.class)
 public class UserServiceTest  {

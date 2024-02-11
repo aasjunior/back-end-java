@@ -1,6 +1,6 @@
 package com.aasjunior.ecommerce.model;
 
-import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
+import com.aasjunior.ecommerce.dto.UserDTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

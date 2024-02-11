@@ -1,7 +1,7 @@
 package com.aasjunior.ecommerce.service;
 
-import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
-import com.aasjunior.ecommerce.shoppingclient.exception.UserNotFoundException;
+import com.aasjunior.ecommerce.dto.UserDTO;
+import com.aasjunior.ecommerce.exception.UserNotFoundException;
 import com.aasjunior.ecommerce.converter.DTOConverter;
 import com.aasjunior.ecommerce.model.User;
 import com.aasjunior.ecommerce.repository.UserRepository;

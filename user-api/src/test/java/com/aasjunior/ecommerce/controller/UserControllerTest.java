@@ -18,7 +18,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import com.aasjunior.ecommerce.converter.DTOConverter;
 import com.aasjunior.ecommerce.service.UserService;
 import com.aasjunior.ecommerce.service.UserServiceTest;
-import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
+import com.aasjunior.ecommerce.dto.UserDTO;
 
 // Anotando a classe para usar a extensão Mockito
 @ExtendWith(MockitoExtension.class)

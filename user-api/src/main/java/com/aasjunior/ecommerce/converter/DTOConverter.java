@@ -1,7 +1,7 @@
 package com.aasjunior.ecommerce.converter;
 
 import com.aasjunior.ecommerce.model.User;
-import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
+import com.aasjunior.ecommerce.dto.UserDTO;
 
 public class DTOConverter {
     public static UserDTO convert(User user){

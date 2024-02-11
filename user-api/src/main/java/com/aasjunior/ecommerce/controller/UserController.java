@@ -1,8 +1,8 @@
 package com.aasjunior.ecommerce.controller;
 
 import com.aasjunior.ecommerce.service.UserService;
-import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
-import com.aasjunior.ecommerce.shoppingclient.exception.UserNotFoundException;
+import com.aasjunior.ecommerce.dto.UserDTO;
+import com.aasjunior.ecommerce.exception.UserNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
