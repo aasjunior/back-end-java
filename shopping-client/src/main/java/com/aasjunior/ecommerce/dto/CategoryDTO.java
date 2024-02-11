@@ -1,4 +1,4 @@
-package com.aasjunior.ecommerce.shoppingclient.dto;
+package com.aasjunior.ecommerce.dto;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;

@@ -1,8 +1,8 @@
 package com.aasjunior.ecommerce.controller;
 
 import com.aasjunior.ecommerce.service.ReportService;
-import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
-import com.aasjunior.ecommerce.shoppingclient.dto.ShopReportDTO;
+import com.aasjunior.ecommerce.dto.ShopDTO;
+import com.aasjunior.ecommerce.dto.ShopReportDTO;
 import com.aasjunior.ecommerce.service.ShopService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

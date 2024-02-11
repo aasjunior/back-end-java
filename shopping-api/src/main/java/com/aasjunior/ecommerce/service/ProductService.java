@@ -3,8 +3,8 @@ package com.aasjunior.ecommerce.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import com.aasjunior.ecommerce.shoppingclient.dto.ProductDTO;
-import com.aasjunior.ecommerce.shoppingclient.exception.ProductNotFoundException;
+import com.aasjunior.ecommerce.dto.ProductDTO;
+import com.aasjunior.ecommerce.exception.ProductNotFoundException;
 
 import reactor.core.publisher.Mono;
 

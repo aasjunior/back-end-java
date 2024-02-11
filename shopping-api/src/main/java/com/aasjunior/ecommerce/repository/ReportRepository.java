@@ -1,6 +1,6 @@
 package com.aasjunior.ecommerce.repository;
 
-import com.aasjunior.ecommerce.shoppingclient.dto.ShopReportDTO;
+import com.aasjunior.ecommerce.dto.ShopReportDTO;
 import com.aasjunior.ecommerce.model.Shop;
 
 import java.time.LocalDate;

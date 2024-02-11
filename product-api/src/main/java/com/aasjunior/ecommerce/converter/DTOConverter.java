@@ -2,8 +2,8 @@ package com.aasjunior.ecommerce.converter;
 
 import com.aasjunior.ecommerce.model.Category;
 import com.aasjunior.ecommerce.model.Product;
-import com.aasjunior.ecommerce.shoppingclient.dto.CategoryDTO;
-import com.aasjunior.ecommerce.shoppingclient.dto.ProductDTO;
+import com.aasjunior.ecommerce.dto.CategoryDTO;
+import com.aasjunior.ecommerce.dto.ProductDTO;
 
 public class DTOConverter {
     public static CategoryDTO convert(Category category){

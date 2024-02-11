@@ -1,5 +1,4 @@
-package com.aasjunior.ecommerce.shoppingclient.exception;
-
+package com.aasjunior.ecommerce.exception;
 public class CategoryNotFoundException extends RuntimeException {
     
 }

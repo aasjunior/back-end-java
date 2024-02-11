@@ -1,7 +1,7 @@
 package com.aasjunior.ecommerce.repository;
 
 import com.aasjunior.ecommerce.model.Shop;
-import com.aasjunior.ecommerce.shoppingclient.dto.ShopReportDTO;
+import com.aasjunior.ecommerce.dto.ShopReportDTO;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.Query;

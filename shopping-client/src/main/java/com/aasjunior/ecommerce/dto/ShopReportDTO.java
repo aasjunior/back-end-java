@@ -1,4 +1,4 @@
-package com.aasjunior.ecommerce.shoppingclient.dto;
+package com.aasjunior.ecommerce.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

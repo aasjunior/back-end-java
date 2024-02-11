@@ -4,9 +4,9 @@ import com.aasjunior.ecommerce.converter.DTOConverter;
 import com.aasjunior.ecommerce.model.Product;
 import com.aasjunior.ecommerce.repository.CategoryRepository;
 import com.aasjunior.ecommerce.repository.ProductRepository;
-import com.aasjunior.ecommerce.shoppingclient.dto.ProductDTO;
-import com.aasjunior.ecommerce.shoppingclient.exception.CategoryNotFoundException;
-import com.aasjunior.ecommerce.shoppingclient.exception.ProductNotFoundException;
+import com.aasjunior.ecommerce.dto.ProductDTO;
+import com.aasjunior.ecommerce.exception.CategoryNotFoundException;
+import com.aasjunior.ecommerce.exception.ProductNotFoundException;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;

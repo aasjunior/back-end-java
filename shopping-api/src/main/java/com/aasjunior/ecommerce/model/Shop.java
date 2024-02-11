@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
+import com.aasjunior.ecommerce.dto.ShopDTO;
 
 @Getter
 @Setter

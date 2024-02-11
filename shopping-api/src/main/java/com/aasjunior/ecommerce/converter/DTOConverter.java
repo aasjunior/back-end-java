@@ -4,8 +4,8 @@ import java.util.stream.Collectors;
 
 import com.aasjunior.ecommerce.model.Item;
 import com.aasjunior.ecommerce.model.Shop;
-import com.aasjunior.ecommerce.shoppingclient.dto.ItemDTO;
-import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
+import com.aasjunior.ecommerce.dto.ItemDTO;
+import com.aasjunior.ecommerce.dto.ShopDTO;
 
 public class DTOConverter {
     public static ItemDTO convert(Item item){

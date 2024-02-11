@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.aasjunior.ecommerce.shoppingclient.dto.ErrorDTO;
-import com.aasjunior.ecommerce.shoppingclient.exception.ProductNotFoundException;
-import com.aasjunior.ecommerce.shoppingclient.exception.UserNotFoundException;
+import com.aasjunior.ecommerce.dto.ErrorDTO;
+import com.aasjunior.ecommerce.exception.ProductNotFoundException;
+import com.aasjunior.ecommerce.exception.UserNotFoundException;
 
 @ControllerAdvice(basePackages = "com.aasjunior.ecommerce.controller")
 public class ShoppingControllerAdvice {

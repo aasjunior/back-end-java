@@ -3,10 +3,10 @@ package com.aasjunior.ecommerce.service;
 import com.aasjunior.ecommerce.converter.DTOConverter;
 import com.aasjunior.ecommerce.model.Shop;
 import com.aasjunior.ecommerce.repository.ShopRepository;
-import com.aasjunior.ecommerce.shoppingclient.dto.ItemDTO;
-import com.aasjunior.ecommerce.shoppingclient.dto.ProductDTO;
-import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
-import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
+import com.aasjunior.ecommerce.dto.ItemDTO;
+import com.aasjunior.ecommerce.dto.ProductDTO;
+import com.aasjunior.ecommerce.dto.ShopDTO;
+import com.aasjunior.ecommerce.dto.UserDTO;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
