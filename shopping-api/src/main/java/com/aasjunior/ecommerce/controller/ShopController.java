@@ -1,6 +1,5 @@
 package com.aasjunior.ecommerce.controller;
 
-import com.aasjunior.ecommerce.service.ReportService;
 import com.aasjunior.ecommerce.dto.ShopDTO;
 import com.aasjunior.ecommerce.dto.ShopReportDTO;
 import com.aasjunior.ecommerce.service.ShopService;
@@ -18,7 +17,6 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ShopController {
     private final ShopService shopService;
-    private final ReportService reportService;
 
     @GetMapping
     public List<ShopDTO> getShops(){
@@ -51,7 +49,7 @@ public class ShopController {
         @RequestParam(name = "valorMinimo", required = false)
         Float valorMinimo
     ){
-        return reportService.getShopsByFilter(dataInicio, dataFim, valorMinimo);
+        return shopService.getShopsByFilter(dataInicio, dataFim, valorMinimo);
     }
 
     @GetMapping("/report")
@@ -62,7 +60,7 @@ public class ShopController {
         @RequestParam(name = "dataFim", required = true)
         @DateTimeFormat(pattern = "dd/MM/yyyy") LocalDate dataFim
     ){
-        return reportService.getReportByDate(dataInicio, dataFim);
+        return shopService.getReportByDate(dataInicio, dataFim);
     }
 
     @PostMapping

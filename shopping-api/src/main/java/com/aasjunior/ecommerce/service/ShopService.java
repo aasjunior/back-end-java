@@ -6,11 +6,13 @@ import com.aasjunior.ecommerce.repository.ShopRepository;
 import com.aasjunior.ecommerce.dto.ItemDTO;
 import com.aasjunior.ecommerce.dto.ProductDTO;
 import com.aasjunior.ecommerce.dto.ShopDTO;
+import com.aasjunior.ecommerce.dto.ShopReportDTO;
 import com.aasjunior.ecommerce.dto.UserDTO;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -86,4 +88,14 @@ public class ShopService {
         }
         return true;
     }
+
+    public List<ShopDTO> getShopsByFilter(LocalDate dataInicio, LocalDate dataFim, Float valorMinimo) {
+		List<Shop> shops = shopRepository.getShopByFilters(dataInicio, dataFim, valorMinimo);
+		return shops.stream().map(DTOConverter::convert).collect(Collectors.toList());		
+		
+	}
+	
+	public ShopReportDTO getReportByDate(LocalDate dataInicio, LocalDate dataFim) {
+		return shopRepository.getReportByDate(dataInicio, dataFim);
+	}
 }

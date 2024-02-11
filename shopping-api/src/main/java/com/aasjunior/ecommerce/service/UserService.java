@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono;
 @Service
 public class UserService {
 
-    @Valid("${USER_API_URL:http://localhost:8080}")
+    @Value("${USER_API_URL:http://localhost:8080}")
     private String userApiURL;
 
     public UserDTO getUserByCpf(String cpf, String key){

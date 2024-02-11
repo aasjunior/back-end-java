@@ -2,7 +2,6 @@ package com.aasjunior.ecommerce.exception.advice;
 
 import java.time.LocalDateTime;
 
-import org.apache.catalina.webresources.WarResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
