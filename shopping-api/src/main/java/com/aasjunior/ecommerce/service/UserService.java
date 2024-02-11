@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
+import com.aasjunior.ecommerce.shoppingclient.exception.UserNotFoundException;
 
 import reactor.core.publisher.Mono;
 
@@ -27,7 +28,7 @@ public class UserService {
 
             return user.block();
         }catch(Exception e){
-            throw new RuntimeException("User not found");
+            throw new UserNotFoundException();
         }
     }
 }
