@@ -48,7 +48,7 @@ public class UserService {
         return DTOConverter.convert(user);
     }
 
-    public UserDTO findByCpfAndKey(String cpf, String key){
+    public UserDTO findByCpf(String cpf, String key){
         User user = userRepository.findByCpfAndKey(cpf, key);
         if(user!=null){
             return DTOConverter.convert(user);

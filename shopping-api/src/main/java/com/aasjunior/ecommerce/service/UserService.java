@@ -14,7 +14,7 @@ public class UserService {
     // hardcoded
     private String userApiURL = "http://localhost:8080";
 
-    public UserDTO getUserByCpf(String cpf){
+    public UserDTO getUserByCpf(String cpf, String key){
         try{
             WebClient webClient = WebClient
                     .builder()
@@ -22,7 +22,7 @@ public class UserService {
                     .build();
             
             Mono<UserDTO> user = webClient.get()
-                    .uri("/user/" + cpf + "/cpf")
+                    .uri("/user/" + cpf + "/cpf?key=" + key)
                     .retrieve()
                     .bodyToMono(UserDTO.class);
 

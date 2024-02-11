@@ -6,6 +6,7 @@ import com.aasjunior.ecommerce.repository.ShopRepository;
 import com.aasjunior.ecommerce.shoppingclient.dto.ItemDTO;
 import com.aasjunior.ecommerce.shoppingclient.dto.ProductDTO;
 import com.aasjunior.ecommerce.shoppingclient.dto.ShopDTO;
+import com.aasjunior.ecommerce.shoppingclient.dto.UserDTO;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -57,14 +58,9 @@ public class ShopService {
         return null;
     }
 
-    public ShopDTO save(ShopDTO shopDTO){
-        if(userService.getUserByCpf(shopDTO.getUserIdentifier()) == null) {
-            return null;
-        }
-
-        if(!validateProducts(shopDTO.getItems())){
-            return null;
-        }
+    public ShopDTO save(ShopDTO shopDTO, String key){
+        UserDTO userDTO = userService.getUserByCpf(shopDTO.getUserIdentifier(), key);
+        validateProducts(shopDTO.getItems());
         shopDTO.setTotal(
             shopDTO
                 .getItems()

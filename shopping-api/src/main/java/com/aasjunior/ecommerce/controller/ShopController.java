@@ -67,7 +67,10 @@ public class ShopController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ShopDTO newShop(@Valid @RequestBody ShopDTO shopDTO){
-        return shopService.save(shopDTO);
+    public ShopDTO newShop(
+        @RequestHeader(name = "key", required = true) String key,
+        @Valid @RequestBody ShopDTO shopDTO
+    ){
+        return shopService.save(shopDTO, key);
     }
 }
