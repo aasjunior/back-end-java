@@ -10,5 +10,49 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
+  
+  user:
+    image: loja/user-api
+    ports:
+      - "8080:8080"
+    environment:
+      POSTGRES_URL: jdbc:postgresql://postgres:5432/dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    depends_on:
+      - postgres
+
+  product:
+    image: loja/product-api
+    ports:
+      - "8081:8081"
+    environment:
+      POSTGRES_URL: jdbc:postgresql://postgres:5432/dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    depends_on:
+      - postgres
+
+  shopping:
+    image: loja/shopping-api
+    ports:
+      - "8082:8082"
+    environment:
+      POSTGRES_URL: jdbc:postgresql://postgres:5432/dev
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    depends_on:
+      - postgres
+
+  gateway:
+    image: loja/gateway
+    ports:
+      - "8084:8084"
+    environment:
+      PRODUCT_API_URL: http://product:8081
+      USER_API_URL: http://user:8080
+      SHOPPING_API_URL: http://shopping:8082
+    depends_on:
+      - postgres
 volumes:
   pgdata:

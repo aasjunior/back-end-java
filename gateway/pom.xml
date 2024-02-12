@@ -16,6 +16,7 @@
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
+		<docker.image.prefix>loja</docker.image.prefix>
     </properties>
     <dependencies>
         <dependency>
@@ -23,12 +24,6 @@
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -52,7 +47,22 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
+            <plugin>
+				<!-- 
+					Adicionar em 'C:users/<usuario>/ .m2/settings.xml':
+						<pluginGroups>
+							<pluginGroup>com.spotify</pluginGroup>
+						</pluginGroups> 
+				-->
+				<groupId>com.spotify</groupId>
+				<artifactId>dockerfile-maven-plugin</artifactId>
+				<version>1.4.9</version>
+				<configuration>
+					<repository>
+						${docker.image.prefix}/${project.artifactId}
+					</repository>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
 

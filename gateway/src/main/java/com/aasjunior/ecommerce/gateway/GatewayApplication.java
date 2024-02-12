@@ -1,5 +1,6 @@
 package com.aasjunior.ecommerce.gateway;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.gateway.route.RouteLocator;
@@ -13,13 +14,13 @@ public class GatewayApplication {
         SpringApplication.run(GatewayApplication.class, args);
     }
 
-    @Valid("${USER_API_URL:http://localhost:8080}")
+    @Value("${USER_API_URL:http://localhost:8080}")
     private String userApiURL;
     
-    @Valid("${PRODUCT_API_URL:http://localhost:8081}")
+    @Value("${PRODUCT_API_URL:http://localhost:8081}")
     private String productApiURL;
     
-    @Valid("${SHOPPING_API_URL:http://localhost:8082}")
+    @Value("${SHOPPING_API_URL:http://localhost:8082}")
     private String shoppingApiURL;
 
     @Bean

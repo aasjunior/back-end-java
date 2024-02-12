@@ -70,7 +70,7 @@ public class UserControllerTest {
         Assertions.assertEquals(
             "[{\"nome\":\"Nome 1\"," +
             "\"cpf\":\"123\",\"endereco\":\"endereco\",\"key\":null," +
-            "\"email\":null,\"telefone\":\"5432\",\"dataCadastro\":null}]", 
+            "\"email\":null,\"telefone\":\"123456789\",\"dataCadastro\":null}]", 
             resp
         );
     }

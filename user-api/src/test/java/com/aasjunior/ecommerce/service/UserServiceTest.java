@@ -30,7 +30,7 @@ public class UserServiceTest  {
         user.setId(id);
         user.setNome(name);
         user.setCpf(cpf);
-        user.setEndereco("endereço");
+        user.setEndereco("endereco");
         user.setTelefone("123456789");
         return user;
     }
@@ -54,7 +54,7 @@ public class UserServiceTest  {
         UserDTO userDTO = DTOConverter.convert(userDB);
         
         Mockito.when(userRepository.save(Mockito.any()))
-            .thenReturn(userDTO);
+            .thenReturn(userDB);
 
         UserDTO user = userService.save(userDTO);
         Assertions.assertEquals("User Name", user.getNome());

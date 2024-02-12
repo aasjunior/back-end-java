@@ -5,38 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f39642f-3ec4-4283-a4c0-ac81e57afabe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/converter/DTOConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/converter/DTOConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/exception/advice/ProductControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/exception/advice/ProductControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-api/src/main/java/com/aasjunior/ecommerce/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/aasjunior/ecommerce/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/aasjunior/ecommerce/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shopping-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/controller/ShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/controller/ShopController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/converter/DTOConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/converter/DTOConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/exception/advice/ShoppingControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/exception/advice/ShoppingControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/model/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/model/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/model/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/repository/ReportRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/repository/ReportRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/repository/ReportRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/repository/ReportRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/ReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/ReportService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/ShopService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/ShopService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/main/java/com/aasjunior/ecommerce/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/test/java/com/aasjunior/ecommerce/service/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/test/java/com/aasjunior/ecommerce/service/ProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-api/src/test/java/com/aasjunior/ecommerce/service/ShopServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-api/src/test/java/com/aasjunior/ecommerce/service/ShopServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/ShoppingClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/ShoppingClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/CategoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ErrorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ErrorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ItemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ItemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ShopDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ShopDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ShopReportDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/ShopReportDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/exception/CategoryNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/exception/CategoryNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/exception/ProductNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/exception/ProductNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/exception/UserNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/src/main/java/com/aasjunior/ecommerce/exception/UserNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-api/src/test/java/com/aasjunior/ecommerce/ShoppingApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shopping-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shopping-client/src/test/java/com/aasjunior/ecommerce/shoppingclient/ShoppingClientApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/src/test/java/com/aasjunior/ecommerce/UserApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/src/test/java/com/aasjunior/ecommerce/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/test/java/com/aasjunior/ecommerce/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +31,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -69,6 +55,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;spring.boot&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -77,6 +64,61 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\adeld\SpringBootProjects\Back-end_java\back-end-java\shopping-client\src\main\java\com\aasjunior\ecommerce" />
     </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.GatewayApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="back-end-java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="back-end-java" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aasjunior.ecommerce.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="product-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aasjunior.ecommerce.ProductApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="shopping-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aasjunior.ecommerce.ShoppingApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ShoppingClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="shopping-client" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aasjunior.ecommerce.ShoppingClientApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="user-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aasjunior.ecommerce.UserApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,6 +133,10 @@
       <workItem from="1707684036871" duration="37000" />
       <workItem from="1707685812983" duration="198000" />
       <workItem from="1707686100738" duration="774000" />
+      <workItem from="1707700081610" duration="3618000" />
+      <workItem from="1707707666428" duration="3712000" />
+      <workItem from="1707745553226" duration="595000" />
+      <workItem from="1707747854346" duration="2561000" />
     </task>
     <servers />
   </component>
