@@ -94,3 +94,74 @@
 
    Quando solicitado, cole o token obtido no passo 4 para autenticar como `loja-admin` no Kubernetes Dashboard.
 
+
+### Script Bash
+
+Crie um arquivo chamado `deploy-k8s.sh` no diretório raiz dos seus microsserviços com o seguinte conteúdo:
+
+```bash
+#!/bin/bash
+
+# Função para aplicar arquivos YAML
+apply_k8s_resources(){
+  local dir=$1
+
+  # Verifica se o arquivo deployment.yaml existe e aplica
+  if [ -f "$dir/deploy/deployment.yaml" ]; then
+      kubectl apply -f "$dir/deploy/deployment.yaml"
+    fi
+
+    # Verifica se o arquivo service.yaml existe e aplica
+    if [ -f "$dir/deploy/service.yaml" ]; then
+      kubectl apply -f "$dir/deploy/service.yaml"
+    fi
+
+    # Verifica se o arquivo configmap.yaml existe e aplica (apenas para shopping-api)
+    if [ -f "$dir/deploy/configmap.yaml" ]; then
+      kubectl apply -f "$dir/deploy/configmap.yaml"
+    fi
+}
+
+# Lista os diretórios dos microsserviços
+services=("user-api" "product-api" "shopping-api")
+
+# Itera sobre cada serviço e aplica os recursos Kubernetes
+for service in "${services[@]}"; do
+  apply_k8s_resources $service
+done
+```
+
+### Executando o Script
+
+1. **Dê permissão de execução ao script:**
+
+   No terminal, execute:
+
+   ```bash
+   chmod +x deploy-k8s.sh
+   ```
+
+2. **Execute o script:**
+
+   Ainda no terminal, execute:
+
+   ```bash
+   ./deploy-k8s.sh
+   ```
+
+![img.png](img.png)
+
+### Explicação
+
+- **Função `apply_k8s_resources`:** A função verifica se os arquivos `deployment.yaml`, `service.yaml`, e `configmap.yaml` existem em cada diretório especificado e aplica-os usando `kubectl apply`.
+
+- **Lista `services`:** Contém os nomes dos diretórios onde os microsserviços estão localizados. Você pode ajustar essa lista conforme necessário.
+
+- **Iteração:** O script percorre cada diretório na lista e chama a função `apply_k8s_resources`, aplicando os arquivos YAML encontrados.
+
+### Vantagens
+
+- **Manutenção Facilitada:** Cada microsserviço mantém seus próprios arquivos de configuração.
+- **Execução Única:** Você só precisa rodar o script uma vez para aplicar todos os recursos.
+
+Isso deve simplificar o processo de implantação dos seus microsserviços sem precisar unificar todos os arquivos YAML.

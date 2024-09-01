@@ -5,20 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f39642f-3ec4-4283-a4c0-ac81e57afabe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgres-config/cluster-user.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgres-config/config-map.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgres-config/dashboard-admin.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgres-config/loja-admin-token.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgres-config/postgres-service.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgres-config/postgres.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/back-end-java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/deploy-k8s.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-api/deploy/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-api/deploy/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping-api/deploy/configmap.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping-api/deploy/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shopping-api/deploy/service.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-api/deploy/deployment.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-api/deploy/service.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,26 +43,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.shopping-api/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Projects/CasaDoCodigo/back-end-java&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;spring.boot&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.shopping-api/Dockerfile.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Projects/CasaDoCodigo/back-end-java/shopping-api",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "spring.boot",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\CasaDoCodigo\back-end-java\shopping-api" />
+      <recent name="E:\Projects\CasaDoCodigo\back-end-java\product-api" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\adeld\SpringBootProjects\Back-end_java\back-end-java\shopping-client\src\main\java\com\aasjunior\ecommerce" />
     </key>
@@ -169,7 +169,7 @@
       <workItem from="1707747854346" duration="2561000" />
       <workItem from="1725121430375" duration="1109000" />
       <workItem from="1725122847277" duration="8727000" />
-      <workItem from="1725137106817" duration="10019000" />
+      <workItem from="1725137106817" duration="12661000" />
     </task>
     <servers />
   </component>
