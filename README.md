@@ -1,5 +1,3 @@
-Aqui está uma versão melhorada da documentação com um passo a passo mais detalhado para configurar o Kubernetes Dashboard, criar um usuário com permissões de administrador e gerar um token de acesso:
-
 ## Kubernetes
 
 ### Configuração do Kubernetes Dashboard
